@@ -1,4 +1,4 @@
-# ts-vue
+# VueForm
 
 > Nuxt.js project
 
