@@ -58,13 +58,13 @@
                 }
             },
             filteredFields() {
-                let filtered = _.difference(this.fields, this.rows);
+                const item = this.rows[this.index];
+                const diff = _.difference(this.fields, this.rows);
 
-                if (this.rows[this.index].name.length > 0) {
-                    filtered.unshift(this.rows[this.index]);
-                    return filtered;
+                if (item.name.length > 0) {
+                    return [item, ...diff];
                 } else {
-                    return filtered;
+                    return diff;
                 }
             }
         },
@@ -84,7 +84,7 @@
                         this.rows[this.index].orderTypeDefault = 'ASC';
                         break;
                 }
-            }
+            },
         }
     }
 </script>

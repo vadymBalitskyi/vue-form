@@ -73,7 +73,7 @@
                 this.rows.splice(index, 1);
             },
             setPriority(){
-                this.rows.forEach((item, index) => item.priority = index);
+                this.rows.forEach((item, index) => item.priority = (index + 1));
             },
             sendData() {
                 const data = JSON.stringify(this.rows);
